@@ -6,11 +6,14 @@ algoritmo "Nome do Programa"
 // Data atual  : DATA_ATUAL/MES_ATUAL/ANO_ATUAL
 var
 
-contador:inteiro
+valor,contador:inteiro
 
 inicio
 contador<-0
-enquanto (contador<=10) faca
+escreva("Até quanto deseja contar? ")
+leia(valor)
+enquanto (contador<=valor) faca
+   escreval(contador)
    contador<-contador+1
 fimenquanto
 
