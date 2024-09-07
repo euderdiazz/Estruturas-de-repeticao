@@ -1,25 +1,35 @@
-algoritmo "Nome do Programa"
+algoritmo "BOLETIM DE DESEMPENHO"
 
 var
 
-aluno,contador:inteiro
-nome:caractere
+aluno,contador,ano:inteiro
+nome,turma,turno,serie:caractere
 nota,nota2,nota3,media,maior:real
 
 inicio
-escreval("------------------------------------")
-escreval("   ESCOLINHA CHAPEUZINHO VERMELHO   ")
-escreval("------------------------------------")
-aluno<-0
+escreval("----------------------------------------------")
+escreval("        ESCOLINHA CHAPEUZINHO VERMELHO        ")
+escreval("----------------------------------------------")
+escreva("Ano: ")
+leia(ano)
+escreva("Série: ")
+leia(serie)
+escreva("Turma: ")
+leia(turma)
+escreva("Turno: ")
+leia(turno)
+escreval("-----------------------------------------------")
+escreval("BOLETIM DE DESEMPENHO DOS ALUNOS DA ",serie," SÉRIE. TURMA: ",turma,". TURNO: ",turno)
+
+escreval("----------------------------------------------")
 escreva("Informe o número de alunos na turma: ")
 leia(aluno)
 contador<-1
-media<-0
         enquanto (contador<=aluno) faca
-            escreval("-------------------------")
+            escreval("----------------------------------")
             escreva("O nome do aluno ", contador,": ")
               leia(nome)
-            escreval("-------------------------")
+            escreval("----------------------------------")
             escreva("Informe a Primeira Nota do ", nome,": ")
              leia(nota)
             escreva("Informa a Segunda Nota do ", nome,": ")
@@ -41,8 +51,4 @@ media<-0
                     fimSe
              contador<-contador+1
         fimenquanto
-                              se media<maior entao 
-                               media<-maior
-                              fimSe
-escreval("O melhor desempenho da turma foi de ",nome," com média de ",media:1:2)
 fimalgoritmo
