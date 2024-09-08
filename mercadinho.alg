@@ -16,8 +16,6 @@ escreval("4.Farinha----------R$3.00/kg")
 escreval("5.Chocolate--------R$4.25/Lt")
 escreval("----------------------------------------------")
 escreval("Informe as quantidades dos produtos adquiridos")
-enquanto (proximoCliente=s) faca
-
             escreva("Quantidade de litros de leite adquiridos: ")
                 leia(leite)
                 totalLeite<-leite*5.00
@@ -35,15 +33,20 @@ enquanto (proximoCliente=s) faca
                 totalFarinha<-farinha*3.00
                     soma<-totalFrango+totalFarinha+totalLeite+totalChocolate+totalOvos
                         escreval("Valor Total da Compra: R$",soma)
-
                         escreva("Pagamento efetuado pelo cliente: ")
                          leia(pagamento)
                         troco<-abs(pagamento-soma)
                                 se (pagamento<soma) entao
                                     escreval("Falta pagar:R$ ",troco)
-                                        enquanto (pagamento<soma) faca
+                                        enquanto (troco<>0) faca
                                             troco<-ABS(pagamento-soma)
-                                        fimenquanto
+                                            se (troco>0) entao
+                                                escreval("Troco do cliente: R$",troco)
+                                            senao
+                                                escreval("Falta pagar: R$",troco)
+                                            fimSe
+                                            troco>=0
+                                            fimenquanto
                                 senao
                                     escreval("Troco do cliente:R$ ",troco)
                                 fimSe                                                                                
