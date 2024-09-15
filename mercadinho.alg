@@ -35,22 +35,17 @@ escreval("Informe as quantidades dos produtos adquiridos")
                         escreval("Valor Total da Compra: R$",soma)
                         escreva("Pagamento efetuado pelo cliente: ")
                          leia(pagamento)
-                        troco<-abs(pagamento-soma)
-                                se (pagamento<soma) entao
-                                    escreval("Falta pagar:R$ ",troco)
-                                        enquanto (troco<>0) faca
-                                            troco<-ABS(pagamento-soma)
-                                            se (troco>0) entao
-                                                escreval("Troco do cliente: R$",troco)
-                                            senao
-                                                escreval("Falta pagar: R$",troco)
-                                            fimSe
-                                            troco>=0
-                                            fimenquanto
-                                senao
-                                    escreval("Troco do cliente:R$ ",troco)
-                                fimSe                                                                                
+                         //Calcular o troco
+                         troco<-pagamento-soma
+                        enquanto (pagamento<soma) faca
+                        se (pagamento<soma) entao
+                            escreval("Falta pagar; R$",abs(troco))
+                        senao
+                            escreval("O troco do cliente é de: R$",troco)
+                        fimse
+                        fimenquanto
+                                                                                                      
 escreval("Deseja atender o próximo cliente? Digite S (para sim) ou N (para Não)")
 leia(proximoCliente)
-fimenquanto
+
 fimalgoritmo
