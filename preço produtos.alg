@@ -33,9 +33,7 @@ precoDesconto3<-precoProduto-(precoProduto*0.05)
          se ((quantidade>5) e (quantidade<=10)) entao
             precoTotal<-precoDesconto2
          senao
-              se (quantidade>10) entao
-                 precoTotal<-precoDesconto3
-              fimse
+            precoTotal<-precoDesconto3
          fimse
     fimse
     
